@@ -368,14 +368,14 @@ HMTL5 fournit une [API de contraintes de validation](https://www.w3.org/TR/html5
 </form>
 ```
 
-En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()> "/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"):
+En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>):
 
 ```js
 var email = document.getElementById("mail");
 
 email.addEventListener("keyup", function (event) {
   if(email.validity.typeMismatch) {
-    email.setCustomValidity("J'attend un e-mail, mon cher&nbsp;!");
+    email.setCustomValidity("J'attends un e-mail, mon cher !");
   } else {
     email.setCustomValidity("");
   }
@@ -583,7 +583,7 @@ Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonct
 </form>
 ```
 
-Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
+Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA) est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
 
 ##### CSS
 
