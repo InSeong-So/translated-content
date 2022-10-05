@@ -1,60 +1,71 @@
 ---
-title: Rendre le contenu éditable
-slug: Web/Guide/HTML/Editable_content
+title: コンテンツを編集可能にする
+slug: conflicting/Web/HTML/Global_attributes/contenteditable
+tags:
+  - Advanced
+  - Example
+  - Guide
+  - HTML
+  - HTML5
+  - Text
+  - Web
+  - contenteditable
+  - text entry
+  - text input
 translation_of: Web/Guide/HTML/Editable_content
-original_slug: Web/HTML/Contenu_editable
+original_slug: Web/Guide/HTML/Editable_content
 ---
-> **Attention :**  Comme indiqué par l'avertissement de la spécification pour [`execCommand()`](https://w3c.github.io/editing/docs/execCommand/), les fonctionnalités correspondantes ne sont pas implémentées complètement ou de façon cohérente entre les différents agents utilisateurs. De plus, cette fonction est indiquée comme dépréciée sur la page de référence pour [`Document.execCommand()`](/fr/docs/Web/API/Document/execCommand). Aussi, ce qui suit sur cette page ne devrait pas être utilisé pour du code en production.
+> **Warning:** [`execCommand()` 仕様書](https://w3c.github.io/editing/docs/execCommand/)で警告しているように、この機能は"すべてのユーザーエージェントで一貫した、または完全な実装が行われているわけではなく"、それに加えて、 [`Document.execCommand()`](/ja/docs/Web/API/Document/execCommand) リファレンスページでは非推奨とされています。したがって、このページの内容の多くは、本番コードで使用するには信頼できません。
 
-En HTML, tout élément peut être éditable. En utilisant des gestionnaires d'évènements JavaScript, on peut transformer une page web en un éditeur de texte riche. Cet article fournit des informations à propos de cette fonctionnalité.
+HTML では、すべての要素を編集可能状態 (editable) にすることができます。 JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキストエディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。
 
-> **Note :** À partir de Firefox 63 Beta/Dev, certaines des fonctionnalités d'édition de texte riche ont été désactivées par défaut pour des raisons de compatibilité entre navigateurs. Les fonctionnalités retirées concernent des objets pour redimensionner des images ([`<img>`](/fr/docs/Web/HTML/Element/Img)), des tableaux ([`<table>`](/fr/docs/Web/HTML/Element/table)), et des éléments positionnés de façon absolue&nbsp;; l'édition de tableaux en ligne pour ajouter ou retirer des lignes ou des colonnes&nbsp;; la poignée qui permet de déplacer des éléments positionnés de façon absolue. Voir le [bug 1449564](https://bugzilla.mozilla.org/show_bug.cgi?id=1449564) pour plus de détails.
+> **Note:** Firefox 63 Beta/Dev Edition では、ブラウザー間の互換性を高めるために、一部のリッチテキスト編集機能を既定で無効にしています。具体的には、 {{htmlelement("img")}}, {{htmlelement("table")}} および絶対位置指定要素のオブジェクトのサイズ変更、インラインテーブルを編集して行や列の追加や削除すること、および絶対位置指定要素の移動を可能にするグラバーです。詳しくは {{bug("1449564")}} を参照してください。
 
-## Le fonctionnement
+## どのような挙動を示すか
 
-Pour rendre un élément HTML éditable, il suffira de lui ajouter l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable). Cela fonctionne pour la quasi-totalité des éléments.
+編集可能にする個所と密接に関係する要素へ {{htmlattrxref("contenteditable")}} 属性を設定しなければなりません。
 
-Voici un exemple simple qui crée un élément [`<div>`](/fr/docs/Web/HTML/Element/div) dont le contenu peut être édité par l'utilisateur.
+ユーザーが内容を編集可能な {{HTMLElement("div")}} 要素を作成する、簡単な記述例を示します。
 
 ```html
 <div contenteditable="true">
-  Vous pouvez éditer ce texte lorsque vous consultez la page.
+  このテキストは閲覧者が編集することができます。
 </div>
 ```
 
-Et voici le résultat obtenu avec ce fragment HTML&nbsp;:
+上記の HTML は以下のようになります:
 
-{{EmbedLiveSample('Le fonctionnement')}}
+{{EmbedLiveSample('How_does_it_work')}}
 
-## Exécuter des commandes
+## コマンドを実行する
 
-Lorsqu'un élément HTML a un attribut `contenteditable` qui vaut `true`, la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) devient disponible. Cela permet d'exécuter des [commandes](/fr/docs/Web/API/Document/execCommand#commandes) pour manipuler les contenus de la région éditable. Certaines commandes affectent la sélection du document en mettant par exemple en forme le texte (gras, italique, etc.) tandis que d'autres insèrent de nouveaux éléments (par exemple un nouveau lien) ou portent sur tout une ligne (par exemple pour l'indenter). Lorsqu'on utilise `contentEditable`, appeler `execCommand()` aura un impact sur l'ensemble de l'élément éditable courant qui est actif.
+HTML 要素の `contenteditable` 属性を `true` に設定すると、{{domxref("document.execCommand()")}} メソッドが使用可能になります。これは、編集可能な部分の内容物を操作する [コマンド](/ja/docs/Web/API/Document/execCommand#commands) を実行できます。ほとんどのコマンドは文書の選択範囲に作用します (例えば、テキストに太字や斜体などのスタイルを適用する) が、新しい要素を挿入する (リンクを追加するなど) コマンドや行全体に作用する (インデント) コマンドもあります。`contentEditable` を使用しているときに `execCommand()` を呼び出すと、現在アクティブな編集可能要素に作用します。
 
-## Différences de génération de balisage
+## マークアップ生成の違い
 
-L'utilisation de `contenteditable` parmi les différents navigateurs fut longtemps compliqué en raison des différences sur le balisage généré. Ainsi, même une action simple (presser Entrée pour créer une nouvelle ligne de texte au sein d'un élément éditable) pouvait être gérée différemment selon les navigateurs (Firefox insérait un élément [`<br>`](/fr/docs/Web/HTML/Element/br), IE/Opera ajoutaient un élément [`<p>`](fr/docs/Web/HTML/Element/p), Chrome/Safari ajoutaient un élément [`<div>`](/fr/docs/Web/HTML/Element/div).
+さまざまなブラウザーで `contenteditable` を使用することは、ブラウザーが生成するマークアップの違いのために、長い間苦痛でした。例えば、編集可能な要素内で新しいテキストの行を作成するために Enter/Return を押下したときのようなシンプルな場合でさえ、主要なブラウザー間で扱いが異なっていました (Firefox は {{htmlelement("br")}} 要素を挿入、IE/Opera は {{htmlelement("p")}} を使用、Chrome/Safari は {{htmlelement("div")}} を使用)。
 
-Cela s'est heureusement amélioré avec le temps et une meilleure cohérence s'est mise en place. Avec [Firefox 60](/fr/docs/Mozilla/Firefox/Releases/60), Firefox placera les différentes lignes dans des éléments [`<div>`](/fr/docs/Web/HTML/Element/div), ayant ainsi le même comportement que Chrome, Opera, Edge, et Safari.
+幸い、最新のブラウザーではこれらが多少統一されています。[Firefox 60](/ja/docs/Mozilla/Firefox/Releases/60) では Chrome、最新の Opera、Edge、Safari に合わせて、{{htmlelement("div")}} 要素で行をくくるように更新しました。
 
-Vous pouvez essayer ceci dans l'exemple ci-avant.
+前出の例で試してみてください。
 
-> **Note :** Internet Explorer, qui n'est plus maintenu, utilisait des éléments [`<p>`](/fr/docs/Web/HTML/Element/p) plutôt que des [`<div>`].
+> **Note:** Internet Explorer はもはや開発されておらず、`<div>` ではなく {{htmlelement("p")}} 要素を使用します。
 
-Si vous souhaitez utiliser un séparateur de paragraphe différent, l'ensemble des navigateurs prennent en charge [`document.execCommand`](/fr/docs/Web/API/Document/execCommand), qui fournit une commande `defaultParagraphSeparator` pour changer ce séparateur. Ainsi, pour utiliser des paragraphes ([`<p>`](/fr/docs/Web/HTML/Element/p)), on pourra exécuter&nbsp;:
+別の方法で段落を分割したい場合は、前出のブラウザーはすべて {{domxref("document.execCommand")}} をサポートしていますので、`defaultParagraphSeparator` コマンドで分割方法を変更できます。例えば、{{htmlelement("p")}} 要素を使用するには以下のようにします:
 
 ```js
-document.execCommand("defaultParagraphSeparator", false, "p");
+document.execCommand("DefaultParagraphSeparator", false, "p");
 ```
 
-De plus, Firefox prend en charge un argument *non-standard*, `br`, pour `defaultParagraphSeparator` depuis Firefox 55. Celui-ci peut s'avérer utile au cas où votre application web se base sur le comportement utilisé par les anciennes versions de Firefox. Pour retrouver l'ancien comportement de Firefox, vous pourrez utiliser cette ligne (uniquement dans Firefox)&nbsp;:
+また Firefox 55 より、`defaultParagraphSeparator` で*非標準*の引数として `br` をサポートしています。これは、ブラウザーが Firefox であるかを確認することで古い Firefox をサポートするウェブアプリケーションで、残念ながら新しい Firefox 向けにウェブアプリケーションを修正するための十分な時間がない場合に、`designMode` または `contenteditable` のエディターを初期化する際に以下の行を挿入すると、古い Firefox の動作に戻すことができます:
 
 ```js
 document.execCommand("defaultParagraphSeparator", false, "br");
 ```
 
-## Sécurité
+## セキュリティ
 
-Pour des raisons de sécurité, par défaut, Firefox ne permet pas au code JavaScript d'utiliser les fonctionnalités du presse-papier (copier, coller, etc.). Cela peut être débrayé dans les préférences `about:config`&nbsp;:
+セキュリティ上の理由で Firefox は、JavaScript コードがクリップボード関連の機能 (コピーや貼り付けなど) を使用することをデフォルトで許可していません。`about:config` を使用して以下の設定を行うと、これらを有効化できます:
 
 ```
 user_pref("capability.policy.policynames", "allowclipboard");
@@ -63,7 +74,7 @@ user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 ```
 
-## Un exemple d'éditeur de texte
+## 例: シンプルであるが完成されたリッチテキストエディター
 
 ```html
 <!doctype html>
@@ -93,24 +104,24 @@ function validateMode() {
 function setDocMode(bToSource) {
   var oContent;
   if (bToSource) {
-  oContent = document.createTextNode(oDoc.innerHTML);
-  oDoc.innerHTML = "";
-  var oPre = document.createElement("pre");
-  oDoc.contentEditable = false;
-  oPre.id = "sourceText";
-  oPre.contentEditable = true;
-  oPre.appendChild(oContent);
-  oDoc.appendChild(oPre);
+    oContent = document.createTextNode(oDoc.innerHTML);
+    oDoc.innerHTML = "";
+    var oPre = document.createElement("pre");
+    oDoc.contentEditable = false;
+    oPre.id = "sourceText";
+    oPre.contentEditable = true;
+    oPre.appendChild(oContent);
+    oDoc.appendChild(oPre);
     document.execCommand("defaultParagraphSeparator", false, "div");
   } else {
-  if (document.all) {
-  oDoc.innerHTML = oDoc.innerText;
-  } else {
-  oContent = document.createRange();
-  oContent.selectNodeContents(oDoc.firstChild);
-  oDoc.innerHTML = oContent.toString();
-  }
-  oDoc.contentEditable = true;
+    if (document.all) {
+      oDoc.innerHTML = oDoc.innerText;
+    } else {
+      oContent = document.createRange();
+      oContent.selectNodeContents(oDoc.firstChild);
+      oDoc.innerHTML = oContent.toString();
+    }
+    oDoc.contentEditable = true;
   }
   oDoc.focus();
 }
@@ -219,8 +230,9 @@ img.intLink { border: 0; }
 </html>
 ```
 
-## Voir aussi
+## 関連情報
 
-- [`HTMLElement.contentEditable`](/fr/docs/Web/API/HTMLElement/contentEditable)
-- L'attribut universel [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)
-- [`caret-color`](/fr/docs/Web/CSS/caret-color), qui permet de définir la couleur pour le curseur d'insertion de texte
+- {{domxref("HTMLElement.contentEditable")}}
+- {{htmlattrxref("contenteditable")}} グローバル属性
+- [Midas](/ja/docs/Mozilla/Projects/Midas) (スクリプトで操作可能なテキストエディターコンポーネント)
+- {{cssxref("caret-color")}} (テキスト挿入キャレットの色を設定できます)
