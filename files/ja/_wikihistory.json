@@ -16579,10 +16579,6 @@
     "modified": "2020-11-30T12:30:31.824Z",
     "contributors": ["mfuji09", "yyss"]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2020-11-29T12:01:32.996Z",
-    "contributors": ["mfuji09", "ExE-Boss", "dskmori", "fscholz", "storywriter"]
-  },
   "Web/CSS/Adjacent_sibling_combinator": {
     "modified": "2020-10-15T21:20:46.943Z",
     "contributors": ["mfuji09", "uknmr", "sii", "lv7777", "ethertank"]
@@ -16787,10 +16783,6 @@
   "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
     "modified": "2020-08-18T01:07:42.151Z",
     "contributors": ["mfuji09", "LuckyWind_sck", "ethertank", "sosleepy", "sii"]
-  },
-  "Web/CSS/CSS_Device_Adaptation": {
-    "modified": "2020-10-15T22:06:16.617Z",
-    "contributors": ["mfuji09"]
   },
   "Web/CSS/CSS_Display": {
     "modified": "2020-10-15T22:01:55.406Z",
@@ -31592,6 +31584,14 @@
   "conflicting/Web/CSS/transform-function/skewX": {
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
+  },
+  "conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e": {
+    "modified": "2020-11-29T12:01:32.996Z",
+    "contributors": ["mfuji09", "ExE-Boss", "dskmori", "fscholz", "storywriter"]
+  },
+  "conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7": {
+    "modified": "2020-10-15T22:06:16.617Z",
+    "contributors": ["mfuji09"]
   },
   "conflicting/Web/HTML/Global_attributes/contenteditable": {
     "modified": "2019-05-13T11:13:31.486Z",

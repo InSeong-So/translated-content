@@ -1,9 +1,11 @@
 ---
 title: '@viewport'
-slug: Web/CSS/@viewport
+slug: conflicting/Web/CSS
 translation_of: Web/CSS/@viewport
+original_slug: Web/CSS/@viewport
 browser-compat: css.at-rules.viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 > **Note :** Voir <https://github.com/w3c/csswg-drafts/issues/4766> quant à la discussion pour le retrait de @viewport des standards.

@@ -1,7 +1,9 @@
 ---
 title: '@viewport'
-slug: Web/CSS/@viewport
+slug: conflicting/Web/CSS
+original_slug: Web/CSS/@viewport
 ---
+
 {{CSSRef}}
 
 ## Summary

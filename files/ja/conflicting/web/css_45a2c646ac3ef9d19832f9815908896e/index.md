@@ -1,6 +1,6 @@
 ---
 title: '@viewport'
-slug: Web/CSS/@viewport
+slug: conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
 tags:
   - '@viewport'
   - アットルール
@@ -11,9 +11,11 @@ tags:
   - リファレンス
   - 画面レイアウト
   - ビューポート
-browser-compat: css.at-rules.viewport
 translation_of: Web/CSS/@viewport
+original_slug: Web/CSS/@viewport
+browser-compat: css.at-rules.viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 > **Note:** <https://github.com/w3c/csswg-drafts/issues/4766> に @viewport を標準化路線から除外することに関する議論があります。

@@ -17035,18 +17035,6 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2020-10-15T21:48:57.222Z",
-    "contributors": [
-      "zzzimaple",
-      "aovitatechnology",
-      "Han1015",
-      "Zhang-Junzhi",
-      "Junetea",
-      "DKLost",
-      "cvrebert"
-    ]
-  },
   "Web/CSS/Adjacent_sibling_combinator": {
     "modified": "2020-10-15T21:22:13.249Z",
     "contributors": [
@@ -33587,6 +33575,18 @@
   "conflicting/Web/Accessibility": {
     "modified": "2019-03-23T22:29:25.203Z",
     "contributors": ["qianzhangcheng"]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2020-10-15T21:48:57.222Z",
+    "contributors": [
+      "zzzimaple",
+      "aovitatechnology",
+      "Han1015",
+      "Zhang-Junzhi",
+      "Junetea",
+      "DKLost",
+      "cvrebert"
+    ]
   },
   "conflicting/Web/CSS/::placeholder": {
     "modified": "2019-03-23T23:21:18.757Z",
