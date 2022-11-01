@@ -1,14 +1,16 @@
 ---
 title: Оператор нулевого слияния (??)
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 tags:
   - JavaScript
   - Language feature
   - Operator
   - Reference
   - nullish coalescing
+original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 browser-compat: javascript.operators.nullish_coalescing
 ---
+
 {{JSSidebar("Operators")}}
 
 **Оператор нулевого слияния (`??`)** — это логический оператор, возвращающий значение правого операнда, если значение левого операнда содержит {{jsxref("null")}} или {{jsxref("undefined")}}, в противном случае возвращается значение левого операнда.

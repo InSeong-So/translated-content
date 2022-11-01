@@ -4791,7 +4791,9 @@
 /ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
+/ja/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment	/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 /ja/docs/Web/JavaScript/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
+/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /ja/docs/Web/JavaScript/Reference/Operators/Special	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Special/get	/ja/docs/Web/JavaScript/Reference/Functions/get
 /ja/docs/Web/JavaScript/Reference/Operators/Special_Operators	/ja/docs/Web/JavaScript/Reference/Operators

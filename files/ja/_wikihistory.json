@@ -28591,10 +28591,6 @@
     "modified": "2020-10-15T22:35:20.460Z",
     "contributors": ["mpcjazz"]
   },
-  "Web/JavaScript/Reference/Operators/Logical_nullish_assignment": {
-    "modified": "2020-10-15T22:35:18.806Z",
-    "contributors": ["mpcjazz"]
-  },
   "Web/JavaScript/Reference/Operators/Multiplication": {
     "modified": "2020-10-15T22:32:55.767Z",
     "contributors": ["mpcjazz", "eltociear"]
@@ -28603,9 +28599,13 @@
     "modified": "2020-10-15T22:32:51.762Z",
     "contributors": ["mpcjazz", "eltociear"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-10-15T22:27:06.369Z",
     "contributors": ["mpcjazz", "dskmori", "sthtnr", "hayashi-ay"]
+  },
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment": {
+    "modified": "2020-10-15T22:35:18.806Z",
+    "contributors": ["mpcjazz"]
   },
   "Web/JavaScript/Reference/Operators/Object_initializer": {
     "modified": "2020-10-15T21:37:12.029Z",

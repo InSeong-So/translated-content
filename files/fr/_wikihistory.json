@@ -25998,7 +25998,7 @@
     "modified": "2020-10-15T21:27:45.620Z",
     "contributors": ["SphinxKnight", "thomasgodart", "teoli"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-11-11T08:53:19.207Z",
     "contributors": ["JNa0", "SphinxKnight", "nkokla"]
   },

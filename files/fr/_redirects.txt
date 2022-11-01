@@ -5795,6 +5795,8 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/unescape	/fr/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/uneval	/fr/docs/Web/JavaScript/Reference/Global_Objects
+/fr/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment	/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /fr/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Addition	/fr/docs/Web/JavaScript/Reference/Operators/Addition
@@ -5814,7 +5816,7 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof	/fr/docs/Web/JavaScript/Reference/Operators/typeof
 /fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_virgule	/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_void	/fr/docs/Web/JavaScript/Reference/Operators/void
-/fr/docs/Web/JavaScript/Reference/Opérateurs/Nullish_coalescing_operator	/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+/fr/docs/Web/JavaScript/Reference/Opérateurs/Nullish_coalescing_operator	/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Optional_chaining	/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires	/fr/docs/Web/JavaScript/Reference/Operators

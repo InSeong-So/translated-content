@@ -1,6 +1,6 @@
 ---
 title: Affectation après coalescence des nuls (??=)
-slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 tags:
   - Assignment operator
   - JavaScript
@@ -8,8 +8,10 @@ tags:
   - Logical Operator
   - Operator
   - Reference
+original_slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 browser-compat: javascript.operators.logical_nullish_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après coalescence des nuls (`x ??= y`) effectue une affectation uniquement si l'opérande de gauche (`x`) vaut [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null).

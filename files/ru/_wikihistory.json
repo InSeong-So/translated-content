@@ -15130,7 +15130,7 @@
     "modified": "2020-10-15T21:45:23.257Z",
     "contributors": ["synth", "BychekRU"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-11-06T20:31:05.880Z",
     "contributors": ["qwerty.wasd.dev", "notacircle"]
   },

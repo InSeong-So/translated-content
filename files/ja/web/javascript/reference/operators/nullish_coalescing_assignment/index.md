@@ -1,6 +1,6 @@
 ---
 title: Null 合体代入 (??=)
-slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 tags:
   - 代入演算子
   - JavaScript
@@ -8,9 +8,11 @@ tags:
   - 論理演算子
   - 演算子
   - Reference
-browser-compat: javascript.operators.logical_nullish_assignment
 translation_of: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+original_slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+browser-compat: javascript.operators.logical_nullish_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 Null 合体代入 (`x ??= y`) 演算子は、`x` が {{Glossary("nullish")}} (`null` または `undefined`) である場合にのみ代入を行います。
