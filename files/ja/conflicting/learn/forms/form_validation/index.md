@@ -1,12 +1,14 @@
 ---
 title: 制約検証 API
-slug: Web/API/Constraint_validation
+slug: conflicting/Learn/Forms/Form_validation
 tags:
   - API
   - Constraint validation
   - Landing
   - Reference
+original_slug: Web/API/Constraint_validation
 ---
+
 {{apiref()}}
 
 制約検証 (Constraint Validation) API により、ユーザーがフォームコントロールに入力した値を、サーバーに値を送信する前にチェックすることができます。
