@@ -1,6 +1,6 @@
 ---
 title: Date.prototype.toGMTString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 tags:
   - Date
   - Deprecated
@@ -9,7 +9,9 @@ tags:
   - Prototype
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+original_slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`toGMTString()`** メソッドは、インターネットグリニッジ標準時 (GMT) 協定に基づき、日付を文字列へ変換します。`toGMTString()` が返す値の正確な書式は、プラットフォームやブラウザによって変化しますが、一般に、人間が読める日付の文字列を表します。
