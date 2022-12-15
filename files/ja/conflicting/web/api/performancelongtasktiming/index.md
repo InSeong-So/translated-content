@@ -1,6 +1,6 @@
 ---
 title: Long Tasks API
-slug: Web/API/Long_Tasks_API
+slug: conflicting/Web/API/PerformanceLongTaskTiming
 tags:
   - API
   - Experimental
@@ -13,7 +13,9 @@ tags:
   - TaskAttributionTiming
   - Web Performance
 translation_of: Web/API/Long_Tasks_API
+original_slug: Web/API/Long_Tasks_API
 ---
+
 {{DefaultAPISidebar("Long Tasks")}}
 
 ## 動機
